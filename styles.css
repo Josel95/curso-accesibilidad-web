@@ -106,9 +106,15 @@ nav {
   color: var(--blanco)
 }
 
+.nav-item:hover a {
+  text-decoration: none;
+  color: var(--gris-oscuro);
+}
+
 .intro {
   margin: 24px 196px 0;
   font-family: var(--secondary-font);
+  color: var(--blanco);
 }
 
 .social-media {
@@ -205,6 +211,10 @@ nav {
 input {
   outline: none;
   width: 100%;
+}
+
+.form-label {
+  color: var(--blanco);
 }
 
 .send-button {
