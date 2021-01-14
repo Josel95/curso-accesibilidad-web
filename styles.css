@@ -68,6 +68,8 @@ body, header, section {
   height: auto;
   margin: 16px 0 8px;
   padding: 8px;
+  outline: 3px solid var(--verde);
+  padding: 8px;
 }
 
 .header {
@@ -121,6 +123,15 @@ nav {
   cursor: pointer;
 }
 
+.nav-item:focus-within {
+  background-color: var(--verde);
+}
+
+.nav-item a:focus {
+  outline: none;
+  color: var(--gris-oscuro);
+}
+
 .nav-item a {
   text-decoration: none;
   color: var(--blanco)
@@ -148,6 +159,15 @@ nav {
   text-decoration: none;
 }
 
+.social-media li a:focus {
+  outline: none;
+}
+
+.social-media li:focus-within {
+  outline: 2px solid var(--verde);
+  padding: 8px
+}
+
 .social-link-text {
   padding: 0 8px;
 }
@@ -160,7 +180,8 @@ nav {
 
 .window {
   overflow: hidden;
-  width: 805px;
+  width: 815px;
+  padding: 8px;
 }
 
 .project-container {
@@ -176,6 +197,11 @@ nav {
 .project-container button {
   background: none;
   border: none;
+  padding: 0;
+}
+
+.project-container button:focus-within {
+  outline: 3px solid var(--verde)
 }
 
 .project {
@@ -198,6 +224,15 @@ nav {
   height: 75px;
   transition: all 0.2s ease-in-out;
   width: 75px;
+  border-style: hidden;
+  border-radius: 50%;
+  padding: 0;
+}
+
+.arrow:focus {
+  transform: scale(1.1);
+  outline: none;
+  box-shadow: 0 0 8px var(--verde);
 }
 
 .arrow:hover {
@@ -207,13 +242,13 @@ nav {
 .arrow-left {
   background: center / contain no-repeat url(./images/play-button-left.png);
   background-color: var(--verde);
-  border-radius: 50%;
+  padding: 0;
 }
 
 .arrow-right {
   background: center / contain no-repeat url(./images/play-button-right.png);
   background-color: var(--verde);
-  border-radius: 50%;
+  padding: 0;
 }
 
 .contact-section {
@@ -236,8 +271,12 @@ nav {
 }
 
 input {
-  outline: none;
   width: 100%;
+}
+
+input:focus {
+  outline: 3px solid var(--verde);
+  padding: 8px;
 }
 
 .form-label {
@@ -257,6 +296,11 @@ input {
   margin-bottom: 48px;
   width: 150px;
   margin-left: auto;
+  border-style: none;
+}
+
+.send-button:focus {
+  outline: 3px solid var(--verde);
 }
 
 .notification {
