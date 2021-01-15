@@ -204,7 +204,7 @@ nav {
   outline: 3px solid var(--verde)
 }
 
-.project {
+.project-img {
   border-radius: 5px;
   border: 2px solid #000;
   display: inline-block;
@@ -283,6 +283,7 @@ input:focus {
   color: var(--blanco);
 }
 
+.modal-button,
 .send-button {
   align-items: center;
   background-color: var(--verde);
@@ -297,6 +298,7 @@ input:focus {
   width: 150px;
   margin-left: auto;
   border-style: none;
+  cursor: pointer;
 }
 
 .send-button:focus {
@@ -336,11 +338,12 @@ input:focus {
   border: 2px solid #000;
   display: flex;
   flex-direction: column;
-  height: 700px;
+  height: 600px;
   justify-content: center;
   position: fixed;
-  top: 15%;
+  top: 5%;
   width: 700px;
+  padding: 56px;
 }
 
 .modal-project-image {
