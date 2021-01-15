@@ -8,6 +8,7 @@ window.onload = () => {
         element.addEventListener("click", e => openModal(e));
     });
     document.body.addEventListener("click", e => closeModal(e));
+    document.body.addEventListener("keyup", listenForScape)
 };
 
 /** Esta funcion se llama cuando la persona hace click en la fecha derecha del carousel para navegar a la derecha */
@@ -78,9 +79,17 @@ function showNotification() {
     }, 3000);
 }
 
+/** Escucha por la tecla esc para cerrar el modal */
+function listenForScape(e) {
+    if(e.keyCode === 27){
+        closeModal(e)
+    }
+}
+
 /** Esta funcion se llama cuando la persona hace click en cualquier porjecto del carousel */
 function openModal(e) {
     document.querySelector(".modal-container").style.display = "flex";
+    document.getElementById("modal-header").focus()
 }
 
 /** Esta funcion se llama para cerrar el modal */
