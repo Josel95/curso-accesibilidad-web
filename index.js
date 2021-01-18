@@ -3,7 +3,7 @@ window.onload = () => {
     document.querySelector(".arrow-left").addEventListener("click", clickLeft);
     document
         .querySelector(".send-button")
-        .addEventListener("click", showNotification);
+        .addEventListener("click", e => validateForm(e));
     document.querySelectorAll(".project").forEach(element => {
         element.addEventListener("click", e => openModal(e));
     });
@@ -69,6 +69,44 @@ function clickLeft() {
         default:
             break;
     }
+}
+
+/* Validar el formulario antes de mostrar la notificación */
+function validateForm(e) {
+    e.preventDefault()
+
+    const nameField = document.getElementById('name')
+    const emailField = document.getElementById('email')
+    const messageField = document.getElementById('message')
+    
+    const nameError = document.getElementById("name-error")
+    const emailError = document.getElementById("email-error")
+    const messageError = document.getElementById("message-error")
+
+    const form = document.querySelector(".form-container")
+
+    nameError.innerHTML = ""
+    emailError.innerHTML = ""
+    messageError.innerHTML = ""
+
+    if(nameField.value === ""){
+        nameError.innerHTML = "! Para enviar el formulario se necesita un nombre"
+        return
+    }
+
+    if(emailField.value === ""){
+        emailError.innerHTML = "! Para enviar el formulario se necesita un email"
+        return
+    }
+
+    if(messageField.value === ""){
+        messageError.innerHTML = "! Para enviar el formulario se necesita un mensaje"
+        return
+    }
+    
+    form.reset()
+
+    showNotification()
 }
 
 /** Esta funcion se llama cuando la persona hace click en el boton de enviar del formulario de contacto */

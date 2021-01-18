@@ -99,10 +99,29 @@
 
     <footer class="contact-section">
         <h2 class="header">Contacto</h2>
+        <p class="intro">Para mandarme un mensaje puedes usar el formulario que sigue</p>
         <form class="form-container">
-            <p class="form-label">Nombre</p><input type="text" aria-label="name"/> <br />
-            <p class="form-label">Correo</p><input type="text" aria-label="email"/> <br />
-            <div class="message-input"><p class="form-label">Mensaje</p><input type="text" aria-label="Message" /> <br /></div>
+            
+            <label class="form-label">Nombre</label>
+            <input type="text" aria-label="name" id="name"/> 
+            <span class="error-message" id="name-error"></span>
+
+            <br />
+
+            <label class="form-label">Correo</label>
+            <input type="text" aria-label="email" id="email"/> 
+            <span class="error-message" id="email-error"></span>
+
+            <br />
+            
+            <div class="message-input">
+                <label class="form-label">Mensaje</label>
+                <input type="text" aria-label="Message" id="message"/> 
+                <span class="error-message" id="message-error"></span>
+            </div>
+
+            <br />
+
             <button class="send-button">Enviar</button>
         </form>
     </footer>
