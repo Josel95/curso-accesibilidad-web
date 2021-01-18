@@ -112,6 +112,7 @@ function validateForm(e) {
 /** Esta funcion se llama cuando la persona hace click en el boton de enviar del formulario de contacto */
 function showNotification() {
     document.querySelector(".notification").style.display = "flex";
+    document.querySelector(".notification").innerHTML = "El formulario fue enviado sin errores"
     setTimeout(function () {
         document.querySelector(".notification").style.display = "none";
     }, 3000);

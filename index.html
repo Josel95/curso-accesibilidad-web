@@ -104,20 +104,20 @@
             
             <label class="form-label">Nombre</label>
             <input type="text" aria-label="name" id="name"/> 
-            <span class="error-message" id="name-error"></span>
+            <span class="error-message" id="name-error" aria-live="assertive"></span>
 
             <br />
 
             <label class="form-label">Correo</label>
             <input type="text" aria-label="email" id="email"/> 
-            <span class="error-message" id="email-error"></span>
+            <span class="error-message" id="email-error" aria-live="assertive"></span>
 
             <br />
             
             <div class="message-input">
                 <label class="form-label">Mensaje</label>
                 <input type="text" aria-label="Message" id="message"/> 
-                <span class="error-message" id="message-error"></span>
+                <span class="error-message" id="message-error" aria-live="assertive"></span>
             </div>
 
             <br />
@@ -126,7 +126,7 @@
         </form>
     </footer>
 
-    <div class="notification">El formulario fue enviado sin errores</div>
+    <div class="notification" aria-live="assertive"></div>
     <div class="modal-container">
         <div class="modal">
             <h2 class="header" id="modal-header" tabindex="0">Ejemplo de un proyecto mio</h2>
